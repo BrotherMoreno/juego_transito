@@ -14,16 +14,19 @@ struct Personaje {
 };
 
 void dibujarPersonaje(Personaje jugadorMan) {
+	Console::BackgroundColor = ConsoleColor::DarkBlue;
 	ubicar(jugadorMan.x, jugadorMan.y);     cout << " O ";
 	ubicar(jugadorMan.x, jugadorMan.y + 1); cout << "/|\\";
 	ubicar(jugadorMan.x, jugadorMan.y + 2); cout << "/ \\";
 }
 void dibujarSimulacioncaminar(Personaje jugadorMan) {
+	Console::BackgroundColor = ConsoleColor::DarkBlue;
 	ubicar(jugadorMan.x, jugadorMan.y);     cout << "\\O/";
 	ubicar(jugadorMan.x, jugadorMan.y + 1); cout << " | ";
 	ubicar(jugadorMan.x, jugadorMan.y + 2); cout << "/ \\";
 }
 void dibujarAccionRecoger(Personaje jugadorMan) {
+	Console::BackgroundColor = ConsoleColor::DarkBlue;
 	ubicar(jugadorMan.x, jugadorMan.y);     cout << "_ O";
 	ubicar(jugadorMan.x, jugadorMan.y + 1); cout << " /\\";
 	ubicar(jugadorMan.x, jugadorMan.y + 2); cout << "| \\";
@@ -42,26 +45,32 @@ void movimientoPersonaje(Personaje&jugadorMan, int mapa[FILA][COLUMNA]) {
 		case Arriba:
 			if (mapa2[jugadorMan.y - jugadorMan.dy][jugadorMan.x] != 2 &&mapa2[jugadorMan.y + 1 - jugadorMan.dy][jugadorMan.x] != 2&& mapa2[jugadorMan.y+2 - jugadorMan.dy][jugadorMan.x ] != 2)
 			{
-				jugadorMan.y = jugadorMan.y - jugadorMan.dy;
 				dibujarSimulacioncaminar(jugadorMan);
 				borrarPersonaje(jugadorMan);
+				jugadorMan.y = jugadorMan.y - jugadorMan.dy;
 			}
 			break;
 		case Abajo:
 			if (mapa2[jugadorMan.y +jugadorMan.dy][jugadorMan.x] != 2 && mapa2[jugadorMan.y + 1 + jugadorMan.dy][jugadorMan.x] != 2 && mapa2[jugadorMan.y + 2 + jugadorMan.dy][jugadorMan.x] != 2)
 			{
+				dibujarSimulacioncaminar(jugadorMan);
+				borrarPersonaje(jugadorMan);
 				jugadorMan.y = jugadorMan.y + jugadorMan.dy;
 			}
 			break;
 		case Derecha:
 			if(mapa2[jugadorMan.x +jugadorMan.dx][jugadorMan.y] != 2 && mapa2[jugadorMan.x + jugadorMan.dx][jugadorMan.x] != 2 )
 			{
+				dibujarSimulacioncaminar(jugadorMan);
+				borrarPersonaje(jugadorMan);
 				jugadorMan.y = jugadorMan.x + jugadorMan.dx;
 			}
 			break;
 		case Izquierda:
 			if (mapa2[jugadorMan.x - jugadorMan.dx][jugadorMan.y] != 2 && mapa2[jugadorMan.x - jugadorMan.dx][jugadorMan.x] != 2)
 			{
+				dibujarSimulacioncaminar(jugadorMan);
+				borrarPersonaje(jugadorMan);
 				jugadorMan.y = jugadorMan.x - jugadorMan.dx;
 			}
 			break;

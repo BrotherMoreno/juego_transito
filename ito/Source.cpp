@@ -3,13 +3,12 @@
 #include"Mybiblioteca.h"
 #include"personajeChosicano.h"
 #include"mapa_two.h"
+#include"Nivel2.h"
 #define ANCHO 82
 #define ALTO 31
 int main() {
 	//menu_principal();
-	Console::SetWindowSize(ANCHO, ALTO);
-	dibujarMapa(mapa2);
-	dibujar_chosicano(4,3);
+	JugarNivel2();
 	_getch();
 	return 0;
 }

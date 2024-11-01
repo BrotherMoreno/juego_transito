@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aliados.h" />
+    <ClInclude Include="Colisiones.h" />
     <ClInclude Include="jugador1.h" />
     <ClInclude Include="mapa_two.h" />
     <ClInclude Include="menu_principal.h" />
