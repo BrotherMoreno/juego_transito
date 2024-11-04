@@ -7,7 +7,10 @@
 #define ANCHO 82
 #define ALTO 31
 int main() {
-	//menu_principal();
+	eliminar_latencia_cursor();
+	eliminarVisibilidadCursor();
+	menu_principal();
+
 	JugarNivel2();
 	_getch();
 	return 0;

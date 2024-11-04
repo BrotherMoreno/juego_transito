@@ -21,3 +21,15 @@ void resaltar_opcion(char* options, int pos_opx, int pos_opy, bool seleccion) {/
 	cout << options << endl;
 	Console::BackgroundColor = ConsoleColor::Black;
 }
+void eliminarVisibilidadCursor() {
+	Console::CursorVisible = false;
+}
+void eliminar_latencia_cursor() {
+
+	HANDLE hconsola = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cursorInfo;
+	GetConsoleCursorInfo(hconsola, &cursorInfo);
+	cursorInfo.bVisible = false;
+	SetConsoleCursorInfo(hconsola, &cursorInfo);
+
+}
