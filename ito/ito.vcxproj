@@ -117,9 +117,12 @@
     <ClInclude Include="aliados.h" />
     <ClInclude Include="Colisiones.h" />
     <ClInclude Include="jugador1.h" />
+    <ClInclude Include="mapa1.h" />
+    <ClInclude Include="mapa3.h" />
     <ClInclude Include="mapa_two.h" />
     <ClInclude Include="menu_principal.h" />
     <ClInclude Include="Mybiblioteca.h" />
+    <ClInclude Include="Nivel1.h" />
     <ClInclude Include="Nivel2.h" />
     <ClInclude Include="personajeChosicano.h" />
     <ClInclude Include="rlutil.h" />

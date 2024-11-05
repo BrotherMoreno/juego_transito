@@ -14,12 +14,9 @@ void resaltar_opcion(char* options, int pos_opx, int pos_opy, bool seleccion) {/
 	if (seleccion) {
 		Console::BackgroundColor = ConsoleColor::Green;
 	}
-	else {
-		Console::BackgroundColor = ConsoleColor::Black;
-	}
 	Console::SetCursorPosition(pos_opx, pos_opy);
 	cout << options << endl;
-	Console::BackgroundColor = ConsoleColor::Black;
+	Console::BackgroundColor = ConsoleColor::White;
 }
 void eliminarVisibilidadCursor() {
 	Console::CursorVisible = false;

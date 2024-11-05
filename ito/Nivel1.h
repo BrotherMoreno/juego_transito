@@ -1,15 +1,15 @@
 #pragma once
 #include "Mybiblioteca.h"
-#include"mapa_two.h"
+#include"mapa1.h"
 #include"jugador1.h"
 #include "aliados.h"
 
-void JugarNivel2() {
-	PersonajeNivel2 jugadorNivel2;
-	jugadorNivel2.x = 1;
-	jugadorNivel2.y = 8;
-	jugadorNivel2.dx = 1;
-	jugadorNivel2.dy = 1;
+void jugarNivel1() {
+	PersonajeNivel1 jugadorNivel1;
+	jugadorNivel1.x = 1;
+	jugadorNivel1.y = 24;
+	jugadorNivel1.dx = 1;
+	jugadorNivel1.dy = 1;
 
 	Aliados actportales;
 	actportales.x = 4;
@@ -17,8 +17,8 @@ void JugarNivel2() {
 	actportales.activo = false;
 
 	Aliados portalRojo;
-	portalRojo.posPortalRojoX=0;
-	portalRojo.posPortalRojoY=16;
+	portalRojo.posPortalRojoX = 0;
+	portalRojo.posPortalRojoY = 16;
 	portalRojo.posPortalRojoSalidaX = 79;
 	portalRojo.posPortalRojoSalidaY = 12;
 
@@ -28,17 +28,16 @@ void JugarNivel2() {
 	portalAmarillo.posPortalAmarilloSalidaX = 40;
 	portalAmarillo.posPortalAmarilloSalidaY = 20;
 
-	dibujarMapa(mapa2);
+	dibujarMapa1(mapa1);
 	bool gano = false;
 	do {
 		actportales.activo = true;
-		
-
 		if (actportales.activo) {
 			activacionPortales(actportales);
-			dibujarPortaleRojo(portalRojo);
-			dibujarPortalAmarillo(portalAmarillo);
-			dibujarPersonajeNivel2(jugadorNivel2);
+		/*	dibujarPortaleRojo(portalRojo);
+			dibujarPortalAmarillo(portalAmarillo);*/
+			dibujarPersonajeNivel1(jugadorNivel1);
 		}
 	} while (!gano);
+
 }

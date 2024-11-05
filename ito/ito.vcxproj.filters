@@ -47,5 +47,14 @@
     <ClInclude Include="Colisiones.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mapa3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nivel1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapa1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
