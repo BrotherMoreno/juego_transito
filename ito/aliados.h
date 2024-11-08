@@ -13,17 +13,17 @@ struct Aliados {
     int posPortalAmarilloSalidaX, posPortalAmarilloSalidaY;
 };
 
-void dibujarPortaleRojo(Aliados &portalRojo) {
+void dibujarPortalRojo(Aliados &portalRojo) {
     //dibuja entrada del portal rojo
     Console::BackgroundColor = ConsoleColor::DarkRed;
     Console::ForegroundColor = ConsoleColor::White;
     ubicar(portalRojo.posPortalRojoX, portalRojo.posPortalRojoY);
+    
     cout << char(174);
     ubicar(portalRojo.posPortalRojoX, portalRojo.posPortalRojoY+1);
     cout << char(174);
     ubicar(portalRojo.posPortalRojoX, portalRojo.posPortalRojoY+2);
     cout << char(174);
-
     //dibuja salida del portal rojo
     ubicar(portalRojo.posPortalRojoSalidaX, portalRojo.posPortalRojoSalidaY);
     cout << char(174);
@@ -52,12 +52,11 @@ void dibujarPortalAmarillo(Aliados &portalAmarillo){
     ubicar(portalAmarillo.posPortalAmarilloSalidaX, portalAmarillo.posPortalAmarilloSalidaY+2);
     cout << char(175);
 }
-
 void activacionPortales(Aliados actportales) {
-    Console::BackgroundColor = ConsoleColor::DarkBlue;
+    Console::BackgroundColor = ConsoleColor::DarkGray;
     Console::ForegroundColor = ConsoleColor::DarkGreen;
     Console::SetCursorPosition(actportales.x, actportales.y);
-    cout << char(208);
+    cout << char(220);
     Console::ForegroundColor = ConsoleColor::Gray;
      
 }

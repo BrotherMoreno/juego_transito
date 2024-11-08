@@ -1,9 +1,9 @@
 #pragma once
 #include "Mybiblioteca.h"
-#include"mapa_two.h"
+
 #include"jugador1.h"
 #include "aliados.h"
-
+#include"Mapas.h";
 void JugarNivel2() {
 	PersonajeNivel2 jugadorNivel2;
 	jugadorNivel2.x = 1;
@@ -28,17 +28,26 @@ void JugarNivel2() {
 	portalAmarillo.posPortalAmarilloSalidaX = 40;
 	portalAmarillo.posPortalAmarilloSalidaY = 20;
 
-	dibujarMapa(mapa2);
+	dibujarMapa2(mapa2);
 	bool gano = false;
+	bool iniciarnivel = true;
 	do {
+		if (iniciarnivel == false) {
+			break;
+		}
 		actportales.activo = true;
 		
 
 		if (actportales.activo) {
 			activacionPortales(actportales);
-			dibujarPortaleRojo(portalRojo);
+			dibujarPortalRojo(portalRojo);
 			dibujarPortalAmarillo(portalAmarillo);
+		}
+		while (iniciarnivel) {
+			borrarPersonajeNivel2(jugadorNivel2);
 			dibujarPersonajeNivel2(jugadorNivel2);
+			movimientoPersonajeNivel2(jugadorNivel2, mapa2);
+
 		}
 	} while (!gano);
 }

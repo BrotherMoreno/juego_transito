@@ -138,13 +138,13 @@ void dibujarPortadaEstatica(int PortadaEstatica[30][80]) {
 	for (int f = 0; f < 30; f++) {
 		for (int c = 0; c < 80; c++) {
 			Console::SetCursorPosition(c, f);
-			if (Portada[f][c] == 0) Console::ForegroundColor = ConsoleColor::White;
-			if (Portada[f][c] == 1) Console::ForegroundColor = ConsoleColor::DarkRed;
-			if (Portada[f][c] == 2) Console::ForegroundColor = ConsoleColor::DarkGreen;
-			if (Portada[f][c] == 3) Console::ForegroundColor = ConsoleColor::Green;
-			if (Portada[f][c] == 4) Console::ForegroundColor = ConsoleColor::Black;
-			if (Portada[f][c] == 5) Console::ForegroundColor = ConsoleColor::DarkYellow;
-			if (Portada[f][c] == 6) Console::ForegroundColor = ConsoleColor::Black;
+			if (PortadaEstatica[f][c] == 0) Console::ForegroundColor = ConsoleColor::White;
+			if (PortadaEstatica[f][c] == 1) Console::ForegroundColor = ConsoleColor::DarkRed;
+			if (PortadaEstatica[f][c] == 2) Console::ForegroundColor = ConsoleColor::DarkGreen;
+			if (PortadaEstatica[f][c] == 3) Console::ForegroundColor = ConsoleColor::Green;
+			if (PortadaEstatica[f][c] == 4) Console::ForegroundColor = ConsoleColor::Black;
+			if (PortadaEstatica[f][c] == 5) Console::ForegroundColor = ConsoleColor::DarkYellow;
+			if (PortadaEstatica[f][c] == 6) Console::ForegroundColor = ConsoleColor::Black;
 
 
 			cout << (char)219;
@@ -201,8 +201,6 @@ void dibujarLlantaizquierda(int LlantaIzquierda[11][15]) {
 	}
 }
 void animacionPortada() {
-	_sleep(100);
-	dibujarPortada(Portada);
 	while (true) {
 		ubicar(48, 0);
 		dibujarPortada(Portada);
@@ -228,8 +226,8 @@ void animacionPortada() {
 	system("cls");
 }
 void jugar() {
-	JugarNivel2();
 	jugarNivel1();
+	JugarNivel2();
 }
 void intrucciones() {
 }
@@ -238,6 +236,7 @@ void menu_principal() {
 	int repetir = true;
 	int mov_opc = 0; //mov de las opciones
 	animacionPortada();
+
 	do {
 		system("cls");
 		dibujarPortadaEstatica(PortadaEstatica);

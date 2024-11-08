@@ -32,9 +32,6 @@
     <ClInclude Include="personajeChosicano.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mapa_two.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="jugador1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,13 +44,13 @@
     <ClInclude Include="Colisiones.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mapa3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Nivel1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mapa1.h">
+    <ClInclude Include="Mapas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enemigos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
