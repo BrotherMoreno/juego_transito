@@ -129,7 +129,10 @@ void movimientoPersonajeNivel1(PersonajeNivel1&jugadorNivel1, int mapa1[FILA][CO
 			_sleep(500);
 			borrarPersonajeNivel1(jugadorNivel1);
 			break;
+		default:
+			break;
 		}
+		
 	}
 }
 void movimientoPersonajeNivel2(PersonajeNivel2&jugadorNivel2, int mapa2[FILA][COLUMNA]) {
