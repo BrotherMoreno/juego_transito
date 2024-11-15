@@ -227,7 +227,6 @@ void animacionPortada() {
 }
 void jugar() {
 	dibujarMapa3(Mapa3);
-	_getch();
 	jugarNivel1();
 	JugarNivel2();
 }

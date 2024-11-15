@@ -79,14 +79,16 @@ void borrarPersonajeNivel2(PersonajeNivel2 jugadorNivel2) {
 }
 
 //funcion movimiento de los personajes
-void movimientoPersonajeNivel1(PersonajeNivel1&jugadorNivel1, int mapa1[FILA][COLUMNA]) {
-	if (kbhit) {
-		switch (_getch()) 
+void movimientoPersonajeNivel1(PersonajeNivel1& jugadorNivel1, int mapa1[FILA][COLUMNA]) {
+	int tecla;
+	if (_kbhit()) {
+		tecla = _getch();
+		switch (tecla)
 		{
 		case Arriba:
-			if (mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x] == 0 &&mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x] == 0&& mapa1[jugadorNivel1.y+2 - jugadorNivel1.dy][jugadorNivel1.x ] == 0&&
-				mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x+1] == 0 && mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x+1] == 0 && mapa1[jugadorNivel1.y + 2 - jugadorNivel1.dy][jugadorNivel1.x+1] == 0&&
-				mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x+2] == 0 && mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x+2] == 0 && mapa1[jugadorNivel1.y + 2 - jugadorNivel1.dy][jugadorNivel1.x+2] == 0)
+			if (mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x] == 0 && mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x] == 0 && mapa1[jugadorNivel1.y + 2 - jugadorNivel1.dy][jugadorNivel1.x] == 0 &&
+				mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 && mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 && mapa1[jugadorNivel1.y + 2 - jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 &&
+				mapa1[jugadorNivel1.y - jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 1 - jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 2 - jugadorNivel1.dy][jugadorNivel1.x + 2] == 0)
 			{
 				dibujarSimulacionCaminarNivel1(jugadorNivel1);
 				_sleep(100);
@@ -95,9 +97,9 @@ void movimientoPersonajeNivel1(PersonajeNivel1&jugadorNivel1, int mapa1[FILA][CO
 			}
 			break;
 		case Abajo:
-			if (mapa1[jugadorNivel1.y +jugadorNivel1.dy][jugadorNivel1.x] ==0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x] == 0&&
-				mapa1[jugadorNivel1.y + jugadorNivel1.dy][jugadorNivel1.x+1] == 0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x+1] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x+1] == 0&&
-				mapa1[jugadorNivel1.y + jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x+2] == 0)
+			if (mapa1[jugadorNivel1.y + jugadorNivel1.dy][jugadorNivel1.x] == 0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x] == 0 &&
+				mapa1[jugadorNivel1.y + jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x + 1] == 0 &&
+				mapa1[jugadorNivel1.y + jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 1 + jugadorNivel1.dy][jugadorNivel1.x + 2] == 0 && mapa1[jugadorNivel1.y + 2 + jugadorNivel1.dy][jugadorNivel1.x + 2] == 0)
 			{
 				dibujarSimulacionCaminarNivel1(jugadorNivel1);
 				_sleep(100);
@@ -115,7 +117,7 @@ void movimientoPersonajeNivel1(PersonajeNivel1&jugadorNivel1, int mapa1[FILA][CO
 			}
 			break;
 		case Izquierda:
-			if ((mapa1[jugadorNivel1.y][(jugadorNivel1.x-2) + jugadorNivel1.dx] == 0)&& (mapa1[jugadorNivel1.y + 1][(jugadorNivel1.x - 2) + jugadorNivel1.dx] == 0)&&((mapa1[jugadorNivel1.y + 2][(jugadorNivel1.x - 2) + jugadorNivel1.dx] == 0)))
+			if ((mapa1[jugadorNivel1.y][(jugadorNivel1.x - 2) + jugadorNivel1.dx] == 0) && (mapa1[jugadorNivel1.y + 1][(jugadorNivel1.x - 2) + jugadorNivel1.dx] == 0) && ((mapa1[jugadorNivel1.y + 2][(jugadorNivel1.x - 2) + jugadorNivel1.dx] == 0)))
 			{
 				dibujarSimulacionCaminarNivel1(jugadorNivel1);
 				_sleep(100);
@@ -132,15 +134,16 @@ void movimientoPersonajeNivel1(PersonajeNivel1&jugadorNivel1, int mapa1[FILA][CO
 		default:
 			break;
 		}
-		
+
 	}
 }
-void movimientoPersonajeNivel2(PersonajeNivel2&jugadorNivel2, int mapa2[FILA][COLUMNA]) {
-	if (kbhit) {
-		switch (_getch()) 
+void movimientoPersonajeNivel2(PersonajeNivel2& jugadorNivel2, int mapa2[FILA][COLUMNA]) {
+	if (_kbhit()) {
+		int tecla = _getch();
+		switch (tecla)
 		{
 		case Arriba:
-			if (mapa2[jugadorNivel2.y - jugadorNivel2.dy][jugadorNivel2.x] ==1 &&mapa2[jugadorNivel2.y + 1 - jugadorNivel2.dy][jugadorNivel2.x] ==1&& mapa2[jugadorNivel2.y+2 - jugadorNivel2.dy][jugadorNivel2.x ] ==1&& jugadorNivel2.y>0)
+			if (mapa2[jugadorNivel2.y - jugadorNivel2.dy][jugadorNivel2.x] == 1 && mapa2[jugadorNivel2.y + 1 - jugadorNivel2.dy][jugadorNivel2.x] == 1 && mapa2[jugadorNivel2.y + 2 - jugadorNivel2.dy][jugadorNivel2.x] == 1 && jugadorNivel2.y > 0)
 			{
 				dibujarSimulacionCaminarNivel2(jugadorNivel2);
 				_sleep(100);
@@ -149,7 +152,7 @@ void movimientoPersonajeNivel2(PersonajeNivel2&jugadorNivel2, int mapa2[FILA][CO
 			}
 			break;
 		case Abajo:
-			if (mapa2[jugadorNivel2.y +jugadorNivel2.dy][jugadorNivel2.x] ==1 && mapa2[jugadorNivel2.y + 1 + jugadorNivel2.dy][jugadorNivel2.x] ==1 && mapa2[jugadorNivel2.y + 2 + jugadorNivel2.dy][jugadorNivel2.x] ==1&& jugadorNivel2.y + 2 <29)
+			if (mapa2[jugadorNivel2.y + jugadorNivel2.dy][jugadorNivel2.x] == 1 && mapa2[jugadorNivel2.y + 1 + jugadorNivel2.dy][jugadorNivel2.x] == 1 && mapa2[jugadorNivel2.y + 2 + jugadorNivel2.dy][jugadorNivel2.x] == 1 && jugadorNivel2.y + 2 < 29)
 			{
 				dibujarSimulacionCaminarNivel2(jugadorNivel2);
 				_sleep(100);
@@ -158,7 +161,7 @@ void movimientoPersonajeNivel2(PersonajeNivel2&jugadorNivel2, int mapa2[FILA][CO
 			}
 			break;
 		case Derecha:
-			if ((mapa2[jugadorNivel2.y][(jugadorNivel2.x+2) + jugadorNivel2.dx] == 1 )&& (mapa2[jugadorNivel2.y + 1][(jugadorNivel2.x+2) + jugadorNivel2.dx] == 1 ) && (mapa2[jugadorNivel2.y+2 ][(jugadorNivel2.x+2) + jugadorNivel2.dx] == 1))
+			if ((mapa2[jugadorNivel2.y][(jugadorNivel2.x + 2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y + 1][(jugadorNivel2.x + 2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y + 2][(jugadorNivel2.x + 2) + jugadorNivel2.dx] == 1))
 			{
 				dibujarSimulacionCaminarNivel2(jugadorNivel2);
 				_sleep(100);
@@ -168,13 +171,15 @@ void movimientoPersonajeNivel2(PersonajeNivel2&jugadorNivel2, int mapa2[FILA][CO
 			}
 			break;
 		case Izquierda:
-			if ((mapa2[jugadorNivel2.y][(jugadorNivel2.x-2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y + 1][(jugadorNivel2.x-2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y +2][(jugadorNivel2.x-2) + jugadorNivel2.dx] == 1)&&(jugadorNivel2.x!=0))
+			if ((mapa2[jugadorNivel2.y][(jugadorNivel2.x - 2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y + 1][(jugadorNivel2.x - 2) + jugadorNivel2.dx] == 1) && (mapa2[jugadorNivel2.y + 2][(jugadorNivel2.x - 2) + jugadorNivel2.dx] == 1) && (jugadorNivel2.x != 0))
 			{
 				dibujarSimulacionCaminarNivel2(jugadorNivel2);
 				_sleep(100);
 				borrarPersonajeNivel2(jugadorNivel2);
-				jugadorNivel2.x= jugadorNivel2.x - jugadorNivel2.dx;
+				jugadorNivel2.x = jugadorNivel2.x - jugadorNivel2.dx;
 			}
+			break;
+		default:
 			break;
 		}
 	}
